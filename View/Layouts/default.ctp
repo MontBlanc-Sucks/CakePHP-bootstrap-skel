@@ -47,7 +47,9 @@
 
 	<?php echo $this->Session->flash(); ?>
       <!-- Main hero unit for a primary marketing message or call to action -->
-	  <?php echo $content_for_layout; ?>
+	  <div class="row">
+	    <?php echo $content_for_layout; ?>
+	  </div>
 
       <footer>
 		<?php echo $this->Html->link(
