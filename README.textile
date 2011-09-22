@@ -2,7 +2,7 @@ h1. CakePHP Project Skelton with twitter bootstrap
 
 PHP 5.2+, CakePHP 2.0+
 
-Copyright 2011, MontBlancSucks ( https://github.com/MontBlanc-Sucks )
+Copyright 2011, MontBlancSucks ( "https://github.com/MontBlanc-Sucks":https://github.com/MontBlanc-Sucks )
 
 h2. Installation
 
