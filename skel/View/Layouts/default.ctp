@@ -13,6 +13,14 @@
 
 		echo $this->Html->css(array('bootstrap.min', 'cake.generic', 'main'));
 
+	?>
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("jquery", "1.6.2");</script>
+	<?php
+		echo $this->Html->script(array(
+			//'bootstrap/bootstrap-twipsy',
+			'main',
+		));
 		echo $scripts_for_layout;
 	?>
 
