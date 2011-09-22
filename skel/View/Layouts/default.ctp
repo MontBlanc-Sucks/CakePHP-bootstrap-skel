@@ -35,9 +35,7 @@
 			<div class="container">
 				<h3><a href="#">CakePHP: the rapid development php framework:</a></h3>
 				<ul class="nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
+					<li class="active"><?php echo $this->Html->link('Home', array('controller' => 'pages', 'home')); ?></li>
 				</ul>
 			</div>
 		</div>
