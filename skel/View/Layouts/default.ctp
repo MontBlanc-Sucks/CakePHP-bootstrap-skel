@@ -11,7 +11,7 @@
 		<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('bootstrap-1.2.0', 'cake.generic', 'main'));
+		echo $this->Html->css(array('bootstrap.min', 'cake.generic', 'main'));
 
 		echo $scripts_for_layout;
 	?>
