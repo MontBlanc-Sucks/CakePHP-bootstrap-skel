@@ -15,6 +15,12 @@ h2. Usage
 <pre>
 cd project_name
 ./Cake/Console/cake bake project app --skel ../CakePHP-bootstrap-skel/skel --empty true
+
+cd app/webroot/css
+cp ../../../../CakePHP-bootstrap-skel/bootstrap/bootstrap.min.css .
+
+cd ../js
+cp -R ../../../../CakePHP-bootstrap-skel/bootstrap/js ./bootstrap
 </pre>
 
 h2. LISENCE
