@@ -11,7 +11,11 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('bootstrap.min', 'cake.generic', 'main'));
+		echo $this->Html->css(array(
+			'bootstrap.min',
+			'cake.generic',
+			'main',
+		));
 
 	?>
 	<script type="text/javascript" src="//www.google.com/jsapi"></script>
