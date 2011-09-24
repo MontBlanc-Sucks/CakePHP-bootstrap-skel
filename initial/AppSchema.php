@@ -17,7 +17,7 @@ class SaveInitialData extends Object {
 			$folder = new Folder($path . DS . $this->dataDir . DS);
 			$this->dataFiles = $folder->find('.*\\' . $this->ext);
 			$this->models = array_map(function($name){
-				return strstr($name, '.', true);
+				return basename($name, $this->ext);
 			}, $this->dataFiles);
 		}
 		if ($isLast) {
