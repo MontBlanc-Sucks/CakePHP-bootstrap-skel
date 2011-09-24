@@ -21,6 +21,14 @@ cp ../../../../CakePHP-bootstrap-skel/bootstrap/bootstrap.min.css .
 
 cd ../js
 cp -R ../../../../CakePHP-bootstrap-skel/bootstrap/js ./bootstrap
+cd ../../..
+</pre>
+
+h3. (optional) Create tables and Insert test data
+
+<pre>
+cp -r ../CakePHP-bootstrap-skel/initial/* app/Config/Schema/
+./lib/Cake/Console/cake schema create --file AppSchema.php
 </pre>
 
 h2. LISENCE
