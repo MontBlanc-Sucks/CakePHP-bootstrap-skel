@@ -16,7 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="<?php echo $pluralVar;?> view">
+<div class="span12">
 <h2><?php echo "<?php  echo __('{$singularHumanName}');?>";?></h2>
 	<dl>
 <?php
@@ -40,7 +40,7 @@ foreach ($fields as $field) {
 ?>
 	</dl>
 </div>
-<div class="actions">
+<div class="span4">
 	<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
 	<ul>
 <?php

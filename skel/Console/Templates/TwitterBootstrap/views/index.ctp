@@ -16,7 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="<?php echo $pluralVar;?> index">
+<div class="span12">
 	<h2><?php echo "<?php echo __('{$pluralHumanName}');?>";?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -74,7 +74,7 @@
 	?>
 	</div>
 </div>
-<div class="actions">
+<div class="span4">
 	<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
 	<ul>
 		<li><?php echo "<?php echo \$this->Html->link(__('New " . $singularHumanName . "'), array('action' => 'add')); ?>";?></li>
