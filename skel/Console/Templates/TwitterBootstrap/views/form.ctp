@@ -16,7 +16,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="<?php echo $pluralVar;?> form">
+<div class="span12">
 <?php echo "<?php echo \$this->Form->create('{$modelClass}');?>\n";?>
 	<fieldset>
 		<legend><?php printf("<?php echo __('%s %s'); ?>", Inflector::humanize($action), $singularHumanName); ?></legend>
@@ -41,7 +41,7 @@
 	echo "<?php echo \$this->Form->end(__('Submit'));?>\n";
 ?>
 </div>
-<div class="actions">
+<div class="span4">
 	<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
 	<ul>
 
