@@ -18,14 +18,31 @@
  */
 ?>
 
+    <?php
+    if ($modelObj) {
+        $schema = $modelObj->schema(true);
+        $fields = array_keys($schema);
+    } else {
+        $fields = $schema = $associations = array();
+    }
+    ?>
+
+    var $components = array('Search.Prg', 'DebugKit.Toolbar');
+    var $presetVars = array(
+        <?php foreach ($fields as $field):?>
+			array('model'=>'<?php echo $currentModelName ?>', 'field' => '<?php echo $field?>', 'type' => 'value'),
+        <?php endforeach;?>
+    );  
+
 /**
  * <?php echo $admin ?>index method
  *
  * @return void
  */
 	public function <?php echo $admin ?>index() {
-		$this-><?php echo $currentModelName ?>->recursive = 0;
-		$this->set('<?php echo $pluralName ?>', $this->paginate());
+        $this->Prg->commonProcess();
+        $this->paginate = array('conditions'=>$this-><?php echo $currentModelName ?>->parseCriteria($this->passedArgs));
+        $this->set('<?php echo $pluralName ?>', $this->paginate());
 	}
 
 /**

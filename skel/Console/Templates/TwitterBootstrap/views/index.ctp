@@ -17,6 +17,23 @@
  */
 ?>
 <div class="row">
+
+	<div class="span16">
+        <div class="hero unit">
+			<?php echo "<?php echo \$this->Form->create('{$modelClass}', array('url' => array_merge(array('action' => 'index'), \$this->params['pass'])));?>\n";
+			foreach ($fields as $field) {
+					if (strpos($action, 'add') !== false && $field == $primaryKey) {
+						continue;
+					} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
+						echo "\t\t <?php echo \$this->Form->input('{$field}');?>\n";
+					}
+			 }
+			echo "<?php echo \$this->Form->submit(__('Search', true), array('div' => false));?>\n";
+			echo "<?php echo \$this->Form->end();?>\n";
+			?>
+		</div>
+	</div> 
+
 	<div class="span3 column">
 		<div class="sidebar">
 			<div class="well">

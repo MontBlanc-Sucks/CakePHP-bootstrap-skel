@@ -44,6 +44,26 @@ class <?php echo $name ?> extends <?php echo $plugin; ?>AppModel {
  */
 	public $useDbConfig = '<?php echo $useDbConfig; ?>';
 <?php endif;?>
+
+<?php
+    $modelObj = ClassRegistry::init($name);
+    if ($modelObj) {
+        $schema = $modelObj->schema(true);
+        $fields = array_keys($schema);
+	} else {
+        $fields = $schema = $associations = array();
+	}
+?>                                                                                                                                                                                 
+/*
+	search plugin
+*/
+    public $actsAs = array('Search.Searchable');
+    public $filterArgs = array(
+        <?php foreach ($fields as $field):?>
+        array('name' => '<?php echo $field?>', 'type' => 'like'),
+        <?php endforeach;?>
+	);
+
 <?php if ($useTable && $useTable !== Inflector::tableize($name)):
 	$table = "'$useTable'";
 	echo "/**\n * Use table\n *\n * @var mixed False or table name\n */\n";
