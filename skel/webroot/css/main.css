@@ -19,6 +19,10 @@ body {
   padding-top: 60px;
 }
 
+dl dt, dl dd {
+  line-height: 50px;
+}
+
 /*
 	cake generic override
 */
