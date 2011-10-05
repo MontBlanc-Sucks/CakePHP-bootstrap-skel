@@ -1,3 +1,47 @@
-.topbar {position:static;}
-.actions {padding:0;border-top:none;background:none;}
+/* ------------------------------------------------------------------
+ *	twitter bootstrap override
+ * ---------------------------------------------------------------- */
 
+/*
+ * Scaffolding
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ * ------------------------------------------------------------------------------------------- */
+html, body {
+  background-color: #ffffff;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+  padding-top: 60px;
+}
+
+/*
+	cake generic override
+*/
+h1, h2, h3, h4 {
+  font-weight: normal;
+  margin-bottom: 0em;
+}
+
+table {
+  border-right: 1px solid #ddd;
+  clear: both;
+  color: #333;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/*                                                                                                                                                                                 
+        original                                                                                                                                                                   
+*/                                                                                                                                                                                 
+div.actions {width:160px;border-top:none;}                                                                                                                                         
+td.actions {padding: 17px 20px 18px 0;border-top:none;}                                                                                                                            
+.paging {background: none;}                                                                                                                                                        
+div.view {border:none;}                                                                                                                                                            
+.error-message {text-align:center;}                                                                                                                                                
+~                                                                                                                                                                                  
+~  

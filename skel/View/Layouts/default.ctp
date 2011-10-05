@@ -12,7 +12,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css(array(
-			'bootstrap.min',
+			'http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css',
 			'cake.generic',
 			'main',
 		));

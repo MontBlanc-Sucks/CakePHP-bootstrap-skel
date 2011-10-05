@@ -16,7 +16,8 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<div class="span12">
+<div class="row">
+<div class="<?php echo $pluralVar;?> view hero-unit">
 <h2><?php echo "<?php  echo __('{$singularHumanName}');?>";?></h2>
 	<dl>
 <?php
@@ -40,7 +41,7 @@ foreach ($fields as $field) {
 ?>
 	</dl>
 </div>
-<div class="span4">
+<div class="actions hero-unit">
 	<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
 	<ul>
 <?php
@@ -62,6 +63,8 @@ foreach ($fields as $field) {
 ?>
 	</ul>
 </div>
+</div>
+
 <?php
 if (!empty($associations['hasOne'])) :
 	foreach ($associations['hasOne'] as $alias => $details): ?>
@@ -98,6 +101,7 @@ foreach ($relations as $alias => $details):
 	$otherSingularVar = Inflector::variable($alias);
 	$otherPluralHumanName = Inflector::humanize($details['controller']);
 	?>
+
 <div class="related">
 	<h3><?php echo "<?php echo __('Related " . $otherPluralHumanName . "');?>";?></h3>
 	<?php echo "<?php if (!empty(\${$singularVar}['{$alias}'])):?>\n";?>
@@ -108,7 +112,7 @@ foreach ($relations as $alias => $details):
 				echo "\t\t<th><?php echo __('" . Inflector::humanize($field) . "'); ?></th>\n";
 			}
 ?>
-		<th class="actions"><?php echo "<?php echo __('Actions');?>";?></th>
+		<th class=""><?php echo "<?php echo __('Actions');?>";?></th>
 	</tr>
 <?php
 echo "\t<?php
@@ -137,3 +141,4 @@ echo "\t<?php endforeach; ?>\n";
 	</div>
 </div>
 <?php endforeach;?>
+<div class="clearfix"></div>
